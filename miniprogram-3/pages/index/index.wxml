@@ -1,0 +1,21 @@
+<!-- pages/index/index.wxml -->
+<swiper indicator-dots="true" circular="true"  >
+		<swiper-item  wx:for="{{swiperList}}"  wx:key="id"  >
+				<image src="{{item.image}}" />
+		</swiper-item>
+</swiper>
+
+<view class="home-container">
+
+  <view class="logo">
+    <text class="title">用户管理系统</text>
+  </view>
+  
+  <view class="description">
+    <text>高效管理用户信息</text>
+  </view>
+  
+  <button class="login-btn" bindtap="navigateToLogin">
+    登录进入系统
+  </button>
+</view>

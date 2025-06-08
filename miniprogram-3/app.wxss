@@ -1,0 +1,124 @@
+/* app.wxss - 全局样式 */
+.container {
+  padding: 20rpx;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 0;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.add-btn {
+  background-color: #07c160;
+  color: white;
+  border-radius: 8rpx;
+  padding: 10rpx 20rpx;
+  font-size: 28rpx;
+}
+
+.user-list {
+  margin-top: 20rpx;
+}
+
+.user-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.name {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.age, .gender, .phone {
+  font-size: 24rpx;
+  color: #666;
+  margin-right: 20rpx;
+}
+
+.user-actions {
+  display: flex;
+  gap: 10rpx;
+}
+
+.edit-btn, .delete-btn {
+  padding: 10rpx 20rpx;
+  font-size: 24rpx;
+  border-radius: 8rpx;
+}
+
+.edit-btn {
+  background-color: #10aeff;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #f76260;
+  color: white;
+}
+
+.loading, .empty-list {
+  text-align: center;
+  padding: 40rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.form-item {
+  margin-bottom: 20rpx;
+}
+
+.form-label {
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+  display: block;
+}
+
+.form-input {
+  width: 100%;
+  padding: 15rpx;
+  font-size: 28rpx;
+  border: 1rpx solid #eee;
+  border-radius: 8rpx;
+  box-sizing: border-box;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 40rpx;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+}
+
+.radio-text {
+  margin-left: 10rpx;
+  font-size: 28rpx;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: #07c160;
+  color: white;
+  border-radius: 8rpx;
+  padding: 20rpx;
+  font-size: 32rpx;
+  margin-top: 40rpx;
+}

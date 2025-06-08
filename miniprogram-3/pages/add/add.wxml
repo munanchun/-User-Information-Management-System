@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="title">添加用户</view>
+  <form class="form">
+    <view class="form-item">
+      <label class="label">姓名：</label>
+      <input class="input" data-field="name" bindinput="onInput" placeholder="请输入姓名" />
+    </view>
+    <view class="form-item">
+      <label class="label">年龄：</label>
+      <input class="input" data-field="age" bindinput="onInput" placeholder="请输入年龄" type="number" />
+    </view>
+    <view class="form-item">
+      <label class="label">性别：</label>
+      <radio-group bindchange="onGenderChange">
+        <label><radio value="男" checked="{{gender === '男'}}"/>男</label>
+        <label><radio value="女" checked="{{gender === '女'}}"/>女</label>
+        <label><radio value="其他" checked="{{gender === '其他'}}"/>其他</label>
+      </radio-group>
+    </view>
+    <view class="form-item">
+      <label class="label">电话：</label>
+      <input class="input" data-field="phone" bindinput="onInput" placeholder="请输入电话" type="number" />
+    </view>
+    <button class="submit-btn" bindtap="submitForm">提交</button>
+  </form>
+</view>

@@ -1,0 +1,53 @@
+<view class="container">
+  <view class="page-title">编辑用户</view>
+  
+  <form class="form-container">
+    <view class="form-item">
+      <text class="label">姓名</text>
+      <input 
+        type="text" 
+        placeholder="请输入姓名" 
+        value="{{userInfo.name}}"
+        data-field="name" 
+        bindinput="onInput"
+      />
+    </view>
+    
+    <view class="form-item">
+      <text class="label">年龄</text>
+      <input 
+        type="digit" 
+        placeholder="请输入年龄" 
+        value="{{userInfo.age}}"
+        data-field="age" 
+        bindinput="onInput"
+      />
+    </view>
+    
+    <view class="form-item">
+      <text class="label">性别</text>
+      <picker 
+        range="{{genderOptions}}" 
+        value="{{genderIndex}}" 
+        bindchange="onGenderChange"
+      >
+        <view class="picker-value">
+          {{userInfo.gender || '请选择性别'}}
+        </view>
+      </picker>
+    </view>
+    
+    <view class="form-item">
+      <text class="label">电话</text>
+      <input 
+        type="number" 
+        placeholder="请输入电话" 
+        value="{{userInfo.phone}}"
+        data-field="phone" 
+        bindinput="onInput"
+      />
+    </view>
+    
+    <button class="submit-btn" bindtap="submitForm">保存</button>
+  </form>
+</view>

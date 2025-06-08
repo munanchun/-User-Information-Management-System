@@ -1,0 +1,33 @@
+<!-- pages/login/login.wxml -->
+<view class="login-container">
+  <view class="login-form">
+    <view class="form-title">用户登录</view>
+    
+    <view class="form-item">
+      <input 
+        class="input" 
+        placeholder="用户名" 
+        bindinput="onUsernameInput" 
+        value="{{username}}"
+      />
+    </view>
+    
+    <view class="form-item">
+      <input 
+        class="input" 
+        placeholder="密码" 
+        bindinput="onPasswordInput" 
+        value="{{password}}"
+        password
+      />
+    </view>
+    
+    <button class="login-btn" bindtap="handleLogin" disabled="{{!canLogin}}">
+      登录
+    </button>
+    
+    <view class="error-message" wx:if="{{errorMessage}}">
+      {{errorMessage}}
+    </view>
+  </view>
+</view>

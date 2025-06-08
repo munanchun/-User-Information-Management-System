@@ -1,0 +1,59 @@
+/* pages/editUser/editUser.wxss */
+.container {
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.page-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  text-align: center;
+  padding: 30rpx 0;
+  color: #333;
+}
+
+.form-container {
+  background-color: #fff;
+  border-radius: 12rpx;
+  padding: 30rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.form-item {
+  margin-bottom: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  width: 120rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+input {
+  flex: 1;
+  height: 80rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 8rpx;
+  padding: 0 20rpx;
+  font-size: 28rpx;
+}
+
+.picker-value {
+  flex: 1;
+  height: 80rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 8rpx;
+  padding: 0 20rpx;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+}
+
+.submit-btn {
+  margin-top: 50rpx;
+  background-color: #007AFF;
+  color: #fff;
+  border: none;
+}

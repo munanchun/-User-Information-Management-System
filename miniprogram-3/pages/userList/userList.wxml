@@ -1,0 +1,38 @@
+<!-- pages/index/index.wxml -->
+<view class="container">
+  <view class="header">
+    <text class="title">用户管理系统</text>
+    <button class="add-btn" bindtap="navigateToAdd">+ 添加用户</button>
+    <button class="pagination-btn" bindtap="gotoPaginationPage">分页显示</button>
+  </view>
+  
+  <!-- 新增搜索区域 -->
+  <view class="search-container">
+    <input 
+      class="search-input" 
+      placeholder="请输入姓名/电话搜索" 
+      bindinput="onSearchInput" 
+      value="{{searchValue}}"
+    />
+    <button class="search-btn" bindtap="handleSearch">搜索</button>
+    <button class="reset-btn" bindtap="resetSearch" wx:if="{{searchValue}}">重置</button>
+  </view>
+  
+  <view class="user-list">
+    <view class="user-item" wx:for="{{userList}}" wx:key="id" bindtap="navigateToEdit" data-id="{{item.id}}">
+      <view class="user-info">
+        <text class="name">{{item.name}}</text>
+        <text class="phone">{{item.phone}}</text>
+      </view>
+      <view class="user-meta">
+        <text>{{item.gender}} · {{item.age}}岁</text>
+      </view>
+      <button class="delete-btn" catchtap="deleteUser" data-id="{{item.id}}">删除</button>
+    </view>
+  </view>
+  
+  <!-- 无数据提示 -->
+  <view class="empty-list" wx:if="{{userList.length === 0}}">
+    <text>暂无用户数据</text>
+  </view>
+</view>

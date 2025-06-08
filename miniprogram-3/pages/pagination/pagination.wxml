@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="title">所有用户分页列表</view>
+  <view class="user-list">
+    <block wx:for="{{userList}}" wx:key="id">
+      <view class="user-item">
+        <text>{{item.name}} {{item.phone}}</text>
+        <text>{{item.gender}} · {{item.age}}岁</text>
+      </view>
+    </block>
+  </view>
+  <view class="pagination">
+    <button bindtap="prevPage" disabled="{{currentPage === 1}}">上一页</button>
+    <view class="page-info">
+      <input type="number" bindinput="onPageInput" value="{{currentPage}}" />
+      / {{totalPages}}
+    </view>
+    <button bindtap="nextPage" disabled="{{currentPage === totalPages}}">下一页</button>
+  </view>
+</view>
